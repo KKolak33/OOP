@@ -1,0 +1,5 @@
+﻿  zadatak5.cpp
+  zadatak6.cpp
+  Generating Code...
+c:\users\hp 255\source\repos\kk_vjezba2\zadatak5.cpp(30): warning C4715: 'inputfun': not all control paths return a value
+  kk_vjezba2.vcxproj -> C:\Users\HP 255\source\repos\kk_vjezba2\Debug\kk_vjezba2.exe
