@@ -10,7 +10,6 @@ public:
 	string num;   // broj karte
 	string zog;   // zog karte
 	card(string mynum, string myzog);    // kreiranje karte brojem i zogom
-	card();   // konstruktor
 	string print() const;    // ispis karte
 };
 

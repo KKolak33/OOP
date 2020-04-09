@@ -1,0 +1,8 @@
+﻿  board.cpp
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(68): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(69): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(84): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(85): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(97): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(98): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  vjezba5_zadatak2.vcxproj -> D:\kk_OOP\katarinakolak-vjezbe\kk_oop_vjezba5\Debug\vjezba5_zadatak2.exe

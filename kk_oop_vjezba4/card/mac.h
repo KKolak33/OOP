@@ -15,7 +15,7 @@ public:
 	vector<card>* generateMac();
 	void shuffle();   // mijesanje karata 
 	card dealDeck();    // dijeljenje karata
-	void printdeck()const;   // ispis maca
+	void printdeck() const;   // ispis maca
 };
 
 #endif

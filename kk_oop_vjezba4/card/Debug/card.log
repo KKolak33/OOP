@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(1879,5): warning : The referenced project '..\kk_oop_vjezba4\kk_oop_vjezba4.vcxproj' does not exist.
+  mac.cpp
+c:\users\hp 255\source\repos\kk_oop_vjezba4\card\mac.cpp(50): warning C4018: '<': signed/unsigned mismatch
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/FORCE' specification
+  card.vcxproj -> C:\Users\HP 255\source\repos\kk_oop_vjezba4\card\Debug\card.exe

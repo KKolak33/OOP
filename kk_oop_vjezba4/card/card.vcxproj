@@ -130,8 +130,10 @@
     <ClInclude Include="player.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="function.cpp" />
+    <ClCompile Include="card.cpp" />
+    <ClCompile Include="mac.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kk_oop_vjezba4\kk_oop_vjezba4.vcxproj">

@@ -1,77 +1,43 @@
 #include "card.h"
 #include "mac.h"
 #include "player.h"
-#include "function.cpp"
 #include<iostream>
 using namespace std;
 
+/*Definirajte klase za kartašku igru Trešeta. Modelirajte klase za kartu, igraèa i mac (deck). Karta se sastoji od broja i zoga. Mac ima 40 karata koji se moraju moæi 
+promiješati i podijeliti igraèima (po 10 karata). Igraè ima ime, kombinaciju karata, broj bodova i može akužati ako ima odgovarajuæu kombinaciju karata (napolitana tj.
+1, 2, 3 iste boje nose 3 boda, a po (barem) tri jedinice, dvojke ili trojke nose tri ili èetiri boda). Napisati program u kojem korisnik odreðuje broj igraèa (2 ili 4)
+i imena igraèa, potom se promiješane karte podijele igraèima, te se ispisuje koliko bodova iz akuže ima koji igraè.*/
+
 int main()
 {
-	mac m; int playerNum;
-	player p1, p2, p3, p4;
+	mac m; int playerNum = 0;
+	vector<player> playerArr;
+	player p;
 
 	// unos broja igraca
-	cout << "Sudjeluju li 2 ili 4 igraca u igri ? " << endl;
-	cin >> playerNum;
-	
-	// generiranje decka 
-	cout << "My deck\n";
+	while (playerNum != 2 && playerNum != 4) {
+		cout << "Sudjeluju li 2 ili 4 igraca u igri ? " << endl;
+		cin >> playerNum;
+	}
+
+	for (int i = 0; i < playerNum; i++) {
+		p.setPlayer();
+		playerArr.push_back(p);
+	}
+
 	m.generateMac();
 	m.printdeck();
 
 	// mijesanje karata
-	cout << endl << "------------------------------------------------------------------------------" << endl;
-	cout << "Shuffled deck\n";
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 2; i++)
 		m.shuffle();
-	//m.shuffle();
-	m.printdeck();
 
-	// podijela karata 
-	cout << endl << "Karte igraca igraca" << endl;
-	if (playerNum == 4){
-
-		p1.setPlayer();
-		p2.setPlayer();
-		p3.setPlayer();
-		p4.setPlayer();
-
-		for (int i = 0; i < 10; i++) {
-
-			p1.comb.push_back(m.dealDeck());
-			p2.comb.push_back(m.dealDeck());
-			p3.comb.push_back(m.dealDeck());
-			p4.comb.push_back(m.dealDeck());
-		}
-
-		p1.points = p1.akuza();
-		p2.points = p2.akuza();
-		p3.points = p3.akuza();
-		p4.points = p4.akuza();
-
-		cout << "Punti igraca jedan  : " << p1.points << endl;
-		cout << "Punti igraca dva  : " << p2.points << endl;
-		cout << "Punti igraca tri  : " << p3.points << endl;
-		cout << "Punti igraca cetiri  : " << p4.points << endl;
+	// podijela karata
+	for (int i = 0; i < playerNum; i++) {
+		for (int j = 0; j < 10; j++)
+			playerArr[i].playerCards.push_back(m.dealDeck());
+		playerArr[i].akuza();
+		cout << "Punti igraca  " << playerArr[i].name << " : " << playerArr[i].points << endl;
 	}
-
-	else if (playerNum == 2) {
-
-		p1.setPlayer();
-		p2.setPlayer();
-
-		for (int i = 0; i < 10; i++) {
-
-			p1.comb.push_back(m.dealDeck());
-			p2.comb.push_back(m.dealDeck());
-		}
-
-		p1.points = p1.akuza();
-		p2.points = p2.akuza();
-
-		cout << "Punti igraca jedan  : " << p1.points << endl;
-		cout << "Punti igraca dva  : " << p2.points << endl;
-	}
-	else
-		cout << "Broj igraca moze biti samo 2 ili 4 !" << endl;
 }

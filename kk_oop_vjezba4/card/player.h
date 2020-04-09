@@ -14,8 +14,9 @@ public:
 	string name;   // ime igraca
 	int points;   // broj bodova 
 	void setPlayer();
-	vector<card> comb;  // kombinacija od 10 karata
+	vector<card> playerCards;  // kombinacija od 10 karata
 	int akuza();    //  (napolitana 1,2,3 iste boje -> 3 boda, 3 / 4 jedinice / duje / trice nose 3 / 4 boda
+	int compareCards(const card& p1);
 };
 
 #endif
