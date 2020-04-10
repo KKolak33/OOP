@@ -10,18 +10,18 @@ using std::vector;
 #include<string>
 
 class player {
-	string name;   // ime igraca
+	vector<card> playerCards;  // kombinacija od 10 karata
 	int points;   // broj bodova 
-	vector<card>* playerCards;  // kombinacija od 10 karata
+	string name;   // ime igraca
 public:
 	player();
 	player(string name);
-	void setPlayerName(player p);
+	void setPlayerName();
 	void setPlayerPoints(int point);
 	void setPlayerCards(card c);
-	string getPlayerName(player p);
+	string getPlayerName();
 	int getPlayerPoints(player p);
-	vector<card>* getPlayerCards(player p);
+	vector<card> getPlayerCards(player p);
 	void setPlayer();
 	int akuza();    //  (napolitana 1,2,3 iste boje -> 3 boda, 3 / 4 jedinice / duje / trice nose 3 / 4 boda
 	int compareCards(const card& p1);

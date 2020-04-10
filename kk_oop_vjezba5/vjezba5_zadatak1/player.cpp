@@ -5,19 +5,21 @@
 
 player::player() {
 	cout << "Pozvan player konstruktor!" << endl;
-	playerCards = new vector<card>[10];
+	playerCards.reserve(10);
+	points = 0;
 }
 
 player::player(string name) {
 	cout << "Pozvan player konstruktor s argumentima" << endl;
-	this->name = name;
+	playerCards.reserve(10);
 	points = 0;
+	this->name = name;
 }
 
-void player::setPlayerName(player p) {
+void player::setPlayerName() {
 	cout << "Unesite ime igraca:" << endl;
-	cin >> p.name;
-	p.points = 0;
+	cin >> this->name;
+	this->points = 0;
 }
 
 void player::setPlayerPoints( int point) {
@@ -25,18 +27,18 @@ void player::setPlayerPoints( int point) {
 }
 
 void player::setPlayerCards(card c) {
-	this->playerCards->push_back(c);
+	playerCards.push_back(c);
 }
 
-string player::getPlayerName(player p) {
-	return p.name;
+string player::getPlayerName() {
+	return this->name;
 }
 
 int player::getPlayerPoints(player p) {
 	return p.points;
 }
 
-vector<card>* player::getPlayerCards(player p) {
+vector<card> player::getPlayerCards(player p) {
 	return p.playerCards;
 }
 
@@ -48,8 +50,8 @@ void player::setPlayer() {
 
 int player::compareCards(const card& p1) {
 	int count = 0;
-	for (int i = 0; i < playerCards->size(); i++) {
-		if (playerCards->at(i).getNum(playerCards->at(i)) == p1.getNum(p1) && playerCards->at(i).getZog(playerCards->at(i)) == p1.getZog(p1))
+	for (int i = 0; i < playerCards.size(); i++) {
+		if (playerCards.at(i).getNum(playerCards.at(i)) == p1.getNum(p1) && playerCards.at(i).getZog(playerCards.at(i)) == p1.getZog(p1))
 			return 1;
 	}
 	return 0;
@@ -79,12 +81,14 @@ int player::akuza()
 }
 
 void player::print() const {
-	for (int i = 0; i < playerCards->size(); i++) {
-		cout << playerCards->at(i).print() << "  ";
+	for (int i = 0; i < playerCards.size(); i++) {
+		cout << playerCards.at(i).print() << "  ";
 	}
 	cout << endl;
 }
 
 player::~player() {
 	cout << "Pozvan player destruktor!" << endl;
+	playerCards.clear();
+	vector<card>().swap(playerCards);
 }

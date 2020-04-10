@@ -2,8 +2,10 @@
 #include "board.h"
 #include "point.h"
 #include<cmath>
+#include<algorithm>
 #include<string>
 using namespace std;
+
 
 // alocira matricu i definira znak za rub okvira
 board::board(int c, int r) {
@@ -38,7 +40,7 @@ char board::getb(board* myboard) {
 void board::setboard() {
 	for (int i = 0; i < this->m; i++) {
 		for (int j = 0; j < this->n; j++) {
-			if ((i == 0 || j == 0) ||( i == m - 1 || j == n - 1)) {
+			if ((i == 0 || j == 0) || (i == m - 1 || j == n - 1)) {
 				this->array[i][j] = this->b;
 			}
 			else
@@ -49,7 +51,7 @@ void board::setboard() {
 }
 
 bool board::compare(double h, double w) {
-	if (round(h) >= this->n || round(w) >= this->m || h == 0 || w == 0 || h == n-1 || w == m - 1)
+	if (round(h) >= this->n || round(w) >= this->m || h == 0 || w == 0 || h == n - 1 || w == m - 1)
 		return false;
 	return true;
 }
@@ -64,50 +66,50 @@ void board::set(int i, int j, int e) {
 }
 
 void board::draw_char(point p, const char& ch) {
-	if (this->compare(p.x, p.y)) {
-		int x = round(p.x);
-		int y = round(p.y);
-		for (int i = 1; i < m - 1; i++) {
-			for (int j = 1; j < n - 1; j++) {
-				if (i == p.x && j == p.y)
-					array[i][j] = ch;
-			}
-			cout << endl;
+	int x = round(p.x);
+	int y = round(p.y);
+	for (int i = 1; i < m - 1; i++) {
+		for (int j = 1; j < n - 1; j++) {
+			if (i == p.x && j == p.y)
+				array[i][j] = ch;
 		}
+		cout << endl;
 	}
-	else
-		cout << "Tocka nema valjane koordinate" << endl;
 }
 
+
 void board::draw_up_line(point p, char ch) {
-	if (this->compare(p.x, p.y)) {
-		int y = round(p.y);
-		for (int i = p.x; i > 0; i--) {
-			array[i][y] = ch;
-		}
+	int y = round(p.y);
+	for (int i = p.x; i > 0; i--) {
+		array[i][y] = ch;
 	}
-	else
-		cout << "Tocka nema valjane koordinate" << endl;
+}
+
+bool setValue(double x, double x2) {
+	if (x < x2)
+		return true;
+	return false;
 }
 
 void board::draw_line(point p1, point p2, char ch) {
-	if (this->compare(p1.x, p1.y) && this->compare(p2.x, p2.y)) {
-		int x1, x2;
-		int y1, y2;
-		p1.x < p2.x ? x1 = round(p1.x), x2 = round(p2.x) : x2 = round(p1.x), x1 = round(p2.x);
-		p1.y < p2.y ? y1 = round(p1.y), y2 = round(p2.y) : y2 = round(p1.y), y1 = round(p2.y);
-		for (int i = y1; i <= y2; i++) {
-			for (int j = x1; j <= x2; j++) {
-				if (y1 == y2)
-					array[y1][j] = ch;
-				else
-					if (i == j)
-						array[j][i] = ch;
-			}
+	int x1 = min(p1.x, p2.x);
+	int x2= max(p1.x, p2.x);
+	int y1 = min(p1.y, p2.y);
+	int y2 = max(p1.y, p2.y);
+
+	cout << x1 << "  " << x2 << "   " << y1 << "  " << y2 << endl;
+	for (int i = y1; i <= y2; i++) {
+		for (int j = x1; j <= x2; j++) {
+			if (y1 == y2)
+				array[y1][j] = ch;
+			else if (x1 == x2)
+				array[i][x1];
+			else
+				if (i == j)
+					array[j][i] = ch;
 		}
 	}
-	else
-		cout << "Tocka nema valjane koordinate" << endl;
+
 }
 
 void board::display() {

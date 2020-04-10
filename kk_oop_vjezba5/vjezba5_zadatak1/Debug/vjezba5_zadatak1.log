@@ -1,6 +1,4 @@
-﻿  main.cpp
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak1\main.cpp(43): error C2065: 'p': undeclared identifier
-  player.cpp
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak1\player.cpp(51): warning C4018: '<': signed/unsigned mismatch
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak1\player.cpp(82): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
+﻿  player.cpp
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak1\player.cpp(53): warning C4018: '<': signed/unsigned mismatch
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak1\player.cpp(84): warning C4018: '<': signed/unsigned mismatch
+  vjezba5_zadatak1.vcxproj -> D:\kk_OOP\katarinakolak-vjezbe\kk_oop_vjezba5\Debug\vjezba5_zadatak1.exe

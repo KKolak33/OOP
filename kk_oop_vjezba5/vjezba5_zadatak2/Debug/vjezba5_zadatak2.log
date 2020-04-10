@@ -1,8 +1,26 @@
 ﻿  board.cpp
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(68): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(69): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(84): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(85): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(97): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(98): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(70): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(82): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(83): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(95): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(96): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(97): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
+d:\kk_oop\katarinakolak-vjezbe\vjezba5_zadatak2\board.cpp(98): warning C4244: 'initializing': conversion from 'const _Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=double
+          ]
   vjezba5_zadatak2.vcxproj -> D:\kk_OOP\katarinakolak-vjezbe\kk_oop_vjezba5\Debug\vjezba5_zadatak2.exe
